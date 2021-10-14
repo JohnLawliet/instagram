@@ -8,10 +8,10 @@ import {
     MenuIcon
 } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
-import Sidebar from './sidebar'
+import Sidebar from './Sidebar'
 import { useState } from 'react'
 import { Transition } from '@headlessui/react'
-import ProfileDropdown from './profile-drop'
+import ProfileDropdown from './ProfileDrop'
 
 // use plugin @tailwindcss/forms to override default forms styles
 const Header = () => {

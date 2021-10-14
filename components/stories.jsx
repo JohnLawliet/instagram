@@ -1,7 +1,7 @@
 import faker from 'faker'
 import { useEffect, useState } from 'react'
 import { fill } from 'tailwindcss/defaulttheme'
-import Story from './story'
+import Story from './Story'
 
 const Stories = () => {
     const [suggestions, setSuggestions] = useState([])

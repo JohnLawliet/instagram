@@ -1,7 +1,7 @@
-import MiniProfile from "./mini-profile"
-import Posts from "./posts"
-import Stories from "./stories"
-import Suggestions from "./suggestions"
+import MiniProfile from "./MiniProfile"
+import Posts from "./Posts"
+import Stories from "./Stories"
+import Suggestions from "./Suggestions"
 
 const Feed = () => {
     return (
