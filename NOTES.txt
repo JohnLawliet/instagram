@@ -1,0 +1,40 @@
+tailwind plugins:
+-   require('@tailwindcss/forms')
+    -   overrides all basic form styles
+    -   necessary for custom styling    
+-   require('tailwind-scrollbar')
+    -   changes scrollbar view
+    -   require('tailwind-scrollbar-hide')
+
+
+new css:
+-   <img className="h-14 w-14 p-[1.5px] border-red-500 border-2" />
+    -   notice the use of padding to give a white gap to the image and then addition of border
+
+-   <div className="relative mt-1 p-3 rounded-md">
+        <div className="absolute inset-y-0 pl-3 flex items-center cursor-pointer">
+            <SearchIcon className="h-5 w-5 text-gray-500"/>
+        </div>
+        <input 
+            type="text"
+            placeholder="Search"
+            className="bg-gray-50 block pl-10 w-full rounded-md border-gray-100 focus:ring-black focus:border-black sm:text-sm"
+        />
+    </div>  
+    -   This is the searchbar
+    -   notice use of absolute with relative to place icon in the bar and then addition of pl-5 to push the input bar due to fixed width i.e 100% 
+
+
+next-auth:
+-   adding logo branding by default:
+    -   theme: {
+            logo: <url>,
+            brandColor: "#4Dwfa2",
+            colorScheme: "auto
+        }
+-   customizing login:
+    -   pages: {
+            signIn: "auth/signin"
+        }
+    -   in pages dir add "auth/signin". Note that the naming is compulsory
+
