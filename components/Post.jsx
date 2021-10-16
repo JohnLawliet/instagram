@@ -109,7 +109,7 @@ const Post = ({id, username, userImg, img, caption}) => {
             }           
 
             {/*Caption*/}
-            <div className="p-5 ">
+            <div className="p-5 w-full">
                 {
                     likes.length > 0 && (
                         <p className="font-bold mb-1">{likes.length} likes</p>
