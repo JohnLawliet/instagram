@@ -10,7 +10,6 @@ import {
 import { HomeIcon } from '@heroicons/react/solid'
 import Sidebar from './Sidebar'
 import { useState } from 'react'
-import { Transition } from '@headlessui/react'
 import ProfileDropdown from './ProfileDrop'
 import {useRouter} from 'next/router'
 import { signIn } from 'next-auth/react'

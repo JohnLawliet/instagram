@@ -1,8 +1,7 @@
-import { useEffect } from "react/cjs/react.development"
 import {onSnapshot, query, collection, orderBy} from 'firebase/firestore'
 import {db} from '../firebase'
 import Post from "./Post"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Posts = () => {
     const [posts, setPosts] = useState([])
