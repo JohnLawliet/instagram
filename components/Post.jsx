@@ -8,10 +8,9 @@ import {
     PaperAirplaneIcon
 } from '@heroicons/react/outline'
 import {HeartIcon as HeartIconFilled} from '@heroicons/react/solid'
-import { useSession } from 'next-auth/react'
+import { useSession, useEffect } from 'next-auth/react'
 import { useState } from 'react'
 import Moment from 'react-moment'
-import { useEffect } from 'react/cjs/react.development'
 import { db } from '../firebase'
 
 
