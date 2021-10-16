@@ -1,5 +1,8 @@
+import { getSession, useSession } from 'next-auth/react'
 import Head from 'next/head'
 import Feed from '../components/Feed'
+import Header from '../components/Header'
+import Modal from '../components/modal'
 
 export default function Home() {
   return (
@@ -8,7 +11,21 @@ export default function Home() {
         <title>Instagram</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <Feed />
+      <Modal />
     </div>
   )
 }
+
+// export async function getServerSideProps(context) {
+//   const session = await getSession(context)
+//   if (!session){
+//     return {
+//       redirect: {
+//         permanent: false,
+//         destination: "/auth/signin"
+//       }
+//     }
+//   }
+// }

@@ -1,5 +1,6 @@
 import faker from 'faker'
 import { useEffect, useState } from 'react'
+import Footer from './footer'
 
 const footerLinks = ["About", "Help", "Press", "API", "Jobs", "Privacy", "Terms", "Locations", "Top accounts", "Hashtags", "Language"]
 
@@ -40,16 +41,7 @@ const Suggestions = () => {
                     </div>
                 ))
             }
-            <footer className="w-full mt-6">                
-            {
-                footerLinks.map(item => (
-                    <p className="inline-block text-[10px] text-gray-400 mr-2 ">
-                    {item}
-                    </p>
-                ))
-            }
-            <div className="text-[10px] text-gray-400 mt-4">© {new Date().getFullYear} INSTAGRAM FROM FACEBOOK</div>
-            </footer>
+            <Footer size="small"/>
         </div>
     )
 }

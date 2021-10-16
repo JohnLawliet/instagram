@@ -7,6 +7,9 @@ module.exports = {
       screens: {
         'xs': '426px',
       },
+      backgroundImage: {
+        'login': "url('/public/loginImage.png')"
+      }
     },
   },
   variants: {

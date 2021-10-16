@@ -37,4 +37,10 @@ next-auth:
             signIn: "auth/signin"
         }
     -   in pages dir add "auth/signin". Note that the naming is compulsory
+    -   REDIRECTING after login:
+        -   onClick={() => SignIntoProvider(provider.id, {callbackUrl: '/'})}
+
+
+ISSUES WITH useSession object:
+-   when in dev env, it is possible that the images might not be properly loaded due to rate limiter. Getting requests from a source multiple times frequently makes nextjs think of it as a sham. THIS PROBLEM DOES NOT OCCUR IN HTTPS 
 

@@ -6,22 +6,25 @@ import {
     BookmarkIcon,
     RefreshIcon
 } from "@heroicons/react/outline"
+import { signOut, useSession } from 'next-auth/react'
+import Link from 'next/link'
 
 const userNavigation = [
     { name: 'Profile', href: '#', icon: UserCircleIcon },
     { name: 'Saved', href: '#', icon: BookmarkIcon },
     { name: 'Settings', href: '#', icon: CogIcon },
-    { name: 'Switch Accounts', href: '#', icon: RefreshIcon },
-    { name: 'Log out', href: '#' },
+    { name: 'Switch Accounts', href: '#', icon: RefreshIcon }
 ]
 
 const ProfileDropdown = () => {
+    const {data: session} = useSession()
+    console.log(session)
     return (
         <Menu as="div" className="relative">
         <div>
           <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
             <span className="sr-only">Open user menu</span>
-            <img className="h-8 w-8 rounded-full" src="https://links.papareact.com/3ke" alt="" />
+            <img className="h-8 w-8 rounded-full" src={session?.user.image} alt="" />
           </Menu.Button>
         </div>
         <Transition
@@ -48,6 +51,9 @@ const ProfileDropdown = () => {
                 )}
               </Menu.Item>
             ))}
+            <Link href="">
+              <a onClick={signOut} className="border-t border-gray-200 block px-4 py-2 text-sm text-gray-700">Log out</a>
+            </Link>
           </Menu.Items>
         </Transition>
       </Menu>

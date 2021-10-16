@@ -14,7 +14,7 @@ const firebaseConfig = {
 // in SSR, it is possible to initialize multiple instances of firebase
 // hence ensure if app is already initialized or not
 // If not initialized create one, else use existing one using getApp(0)
-const app = !getApps.length() ? initializeApp(firebaseConfig) : getApp()
+const app = !getApps.length ? initializeApp(firebaseConfig) : getApp()
 const db = getFirestore()
 const storage = getStorage()
 
