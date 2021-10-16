@@ -1,7 +1,6 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
-import Image from 'next/image'
 
 export default function Sidebar({setIsOpen, isOpen }) {
 

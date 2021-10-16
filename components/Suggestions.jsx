@@ -1,6 +1,6 @@
 import faker from 'faker'
 import { useEffect, useState } from 'react'
-import Footer from './footer'
+import Footer from './Footer'
 
 const footerLinks = ["About", "Help", "Press", "API", "Jobs", "Privacy", "Terms", "Locations", "Top accounts", "Hashtags", "Language"]
 

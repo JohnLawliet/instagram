@@ -18,7 +18,6 @@ const userNavigation = [
 
 const ProfileDropdown = () => {
     const {data: session} = useSession()
-    console.log(session)
     return (
         <Menu as="div" className="relative">
         <div>

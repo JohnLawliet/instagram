@@ -1,6 +1,6 @@
 import { getProviders, signIn as SignIntoProviders } from "next-auth/react"
 import Image from 'next/image'
-import Footer from "../../components/footer"
+import Footer from "../../components/Footer"
 
 const signIn = ({providers}) => {
   return (
@@ -75,29 +75,6 @@ const signIn = ({providers}) => {
   )
 }
 
-
-// return (
-//   <div className="flex flex-col items-center justify-center min-h-screen ">
-//     <img 
-//       className="w-80"
-//       src="https://links.papareact.com/ocw"
-//       alt=""
-//     />
-//     <p className="font-xs italic">Laborum pariatur aute et laboris mollit non pariatur culpa nisi elit.</p>
-
-//     <div className="mt-40">
-      // {Object.values(providers).map((provider) =>(
-      //   <div key={provider.name}>
-      //     <button className="p-3 bg-blue-500 rounded-lg text-white"
-      //       onClick={() => SignIntoProviders(provider.id)}
-      //     >
-      //       Sign in with {provider.name}
-      //     </button>
-      //   </div>
-      // ))}
-//     </div>
-//   </div>
-// )
 
 export default signIn
 
