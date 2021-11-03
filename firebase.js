@@ -3,7 +3,7 @@ import {getFirestore} from 'firebase/firestore'
 import {getStorage} from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBLNAlWvDPUT_d2cTEma5uL7znOnK9pA0w",
+  apiKey: process.env.FIREBASE_KEY,
   authDomain: "instagram-b7fd7.firebaseapp.com",
   projectId: "instagram-b7fd7",
   storageBucket: "instagram-b7fd7.appspot.com",
