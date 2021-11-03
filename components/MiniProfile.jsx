@@ -6,7 +6,7 @@ const MiniProfile = () => {
     return (
         <div className="flex items-center justify-between mt-14 ml-10">
             <img 
-                src="https://links.papareact.com/3ke"
+                src={session.user.image}
                 className="rounded-full border p-[2px] w-16 h-16"
                 alt=""
             />

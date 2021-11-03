@@ -15,7 +15,6 @@ const Modal = () => {
     const captionRef = useRef(null)
     const [selectedFile, setSelectedFile] = useState(null)
     const [loading, setLoading] = useState(false)
-    console.log(session)
 
     const uploadPost = async () => {
         if (loading) return

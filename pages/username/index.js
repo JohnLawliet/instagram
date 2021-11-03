@@ -1,20 +1,26 @@
-import Image from 'next/image'
+import { UserCircleIcon } from '@heroicons/react/solid'
+import { useSession } from 'next-auth/react'
 
 const ProfilePage = () => {
+    const {data:session} = useSession()
+    
     return (
         <div className="bg-gray-100 ">
             <div className="max-w-screen-lg mx-auto h-screen">
                 <div className="border-b border-gray-300 ">
                     <div className="max-w-3xl flex p-4 justify-evenly items-center h-2/6">
                         <div className="mr-4">
-                            <Image 
-                                src="https://links.papareact.com/3ke"
-                                alt="profile pic"
-                                objectFit="contain"
-                                height={150}
-                                width={150}
-                                className="rounded-full"
-                            />
+                        {
+                            session?
+                                session.user.image
+                                ? <img 
+                                    src={session.user.image}
+                                    className="rounded-full border p-[2px] w-36 h-36"
+                                    alt=""
+                                /> 
+                                : <span className="w-36 h-36 rounded-full bg-gray-200 text-semibold text-12 flex items-center justify-center">{session.user.name[0]}</span>
+                            : <UserCircleIcon className="h-8 text-gray-200"/>
+                        }
                             <h1 className="font-medium sm:hidden text-center">Jonty thakur</h1>
                         </div>
 
